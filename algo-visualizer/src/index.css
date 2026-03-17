@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+  body {
+    @apply bg-slate-950 text-slate-100 antialiased;
+    background-image: 
+      radial-gradient(ellipse at 20% 50%, rgba(99, 102, 241, 0.08) 0%, transparent 50%),
+      radial-gradient(ellipse at 80% 20%, rgba(139, 92, 246, 0.06) 0%, transparent 50%),
+      radial-gradient(ellipse at 50% 80%, rgba(59, 130, 246, 0.05) 0%, transparent 50%);
+    background-attachment: fixed;
+  }
+}
+
+@layer components {
+  .glass {
+    @apply bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl;
+  }
+
+  .glass-dark {
+    @apply bg-slate-900/60 backdrop-blur-xl border border-white/8 rounded-2xl;
+  }
+
+  .glass-card {
+    @apply bg-slate-900/40 backdrop-blur-xl border border-white/10 rounded-3xl shadow-2xl;
+    box-shadow: 
+      0 0 0 1px rgba(255,255,255,0.05),
+      0 25px 50px -12px rgba(0, 0, 0, 0.5),
+      inset 0 1px 0 rgba(255,255,255,0.08);
+  }
+
+  .btn-control {
+    @apply flex items-center justify-center w-10 h-10 rounded-xl bg-white/8 hover:bg-white/15 border border-white/10 hover:border-white/20 text-slate-300 hover:text-white transition-all duration-200 cursor-pointer select-none;
+  }
+
+  .btn-control:active {
+    @apply scale-95;
+  }
+
+  .btn-primary {
+    @apply flex items-center justify-center w-12 h-12 rounded-xl bg-indigo-500 hover:bg-indigo-400 text-white shadow-lg transition-all duration-200 cursor-pointer select-none;
+    box-shadow: 0 0 20px rgba(99, 102, 241, 0.4);
+  }
+
+  .btn-primary:active {
+    @apply scale-95;
+  }
+
+  .code-line {
+    @apply px-4 py-1 rounded-lg font-mono text-sm leading-relaxed text-slate-500 transition-all duration-300;
+  }
+
+  .code-line.active {
+    @apply text-slate-100 bg-indigo-500/20 border-l-2 border-indigo-400;
+  }
+
+  .code-line .line-num {
+    @apply text-slate-600 w-6 inline-block select-none mr-2 transition-colors duration-300;
+  }
+
+  .code-line.active .line-num {
+    @apply text-indigo-400;
+  }
+
+  .badge {
+    @apply inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold font-mono;
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    @apply bg-gradient-to-r from-cyan-400 via-indigo-400 to-purple-400 bg-clip-text text-transparent;
+  }
+
+  .bg-white\/8 {
+    background-color: rgba(255, 255, 255, 0.08);
+  }
+
+  .border-white\/8 {
+    border-color: rgba(255, 255, 255, 0.08);
+  }
+
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+}

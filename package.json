@@ -1,0 +1,13 @@
+{
+  "name": "anti-gravity-root",
+  "version": "1.0.0",
+  "description": "Root control for Anti-Gravity MERN stack",
+  "scripts": {
+    "install:all": "npm install && cd server && npm install && cd ../algo-visualizer && npm install",
+    "dev": "npx concurrently \"cd server && npm run dev\" \"cd algo-visualizer && npm run dev\"",
+    "start": "npm run dev"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  }
+}
