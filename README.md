@@ -1,4 +1,4 @@
-# Anti-Gravity: Full-Stack AI Algorithm Visualizer
+Algologic: Full-Stack AI Algorithm Visualizer
 
 An intelligent, full-stack MERN application that uses Google Gemini AI to dynamically generate and visualize complex algorithms and system concepts.
 
